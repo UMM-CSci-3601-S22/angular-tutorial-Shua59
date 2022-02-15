@@ -6,6 +6,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { createComponentDefinitionMap } from '@angular/compiler/src/render3/partial/component';
 
 @NgModule({
   imports: [
@@ -14,12 +15,15 @@ import { ProductListComponent } from './product-list/product-list.component';
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
       { path: 'products/:productId', component: ProductDetailsComponent },
+      { path: 'cart', component: CartComponent },
     ], { useHash: true })
   ],
   declarations: [
     AppComponent,
     TopBarComponent,
-    ProductListComponent
+    ProductListComponent,
+    ProductDetailsComponent,
+    CartComponent,
   ],
   bootstrap: [
     AppComponent
