@@ -18,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
       { path: '', component: ProductListComponent },
       { path: 'products/:productId', component: ProductDetailsComponent },
       { path: 'cart', component: CartComponent },
+      { path: 'shipping', component: ShippingComponent },
     ], { useHash: true })
   ],
   declarations: [
@@ -26,6 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
     ProductListComponent,
     ProductDetailsComponent,
     CartComponent,
+    ShippingComponent
   ],
   bootstrap: [
     AppComponent
